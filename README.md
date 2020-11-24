@@ -1,30 +1,26 @@
 # CompressedCrack
+Phá mã file rar, zip
 
-Compressed Crack is a simple tool to help you crack password zip and rar files.
-
-Author: Thanh Minh
 
 ## Requirements:
+Tải python và cài đặt, link dưới:
+[Python 3.x]
+(https://www.python.org/downloads/)
 
-[Python 3.x](https://www.python.org/downloads/)
+Sử dụng
+```
+Sau khi tải file về, extract ra, vào trong folder mở của sổ CMD trong folder bằng shift + chuột phải => chọn Open Powershell Window here
 
-## Install
+Bên trong cửa sổ CMD gõ cú pháp: 
 
-```
-apt-get -y install git
-git clone https://github.com/thanhminh6996/CompressedCrack.git
-cd ./CompressedCrack
-```
-## Use
-```
 python crack.py -i INPUT [rules [rules ...]]
 
-positional arguments:
-  rules                 <min> <max> <character>
+Ví dụ: python crack.py -i D:\boku\ganktem.zip 5 7 axuy69
 
-optional arguments:
-  -h, --help            show this help message and exit
-  -i INPUT, --input INPUT
-                        Insert the file path of compressed file
-                        
-```                       
+trong đó 
+INPUT đường dẫn tời file
+5,7, axuy69: Crack những pass trong khoảng từ 5->7 ký tự và các ký tự thuộc tập hợp (a,x,u,y,6,9)
+
+Nên set ký tự: abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890
+Chiều dài thì nên set 6->9 
+Nếu pass càng dài sẽ mất nhiều thời gian để crack
